@@ -98,3 +98,26 @@ th {
     width: 100%;
     margin: auto;
 }
+/* =============================================== */
+/* REGRAS PARA TELAS PEQUENAS (CELULARES)          */
+/* =============================================== */
+@media (max-width: 600px) {
+
+    /* Faz o container dos botões empilhar os itens verticalmente */
+    .amortization-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Adiciona um espaço entre os botões empilhados */
+    }
+
+    /* Faz cada botão dentro do container ocupar 100% da largura */
+    .amortization-buttons button {
+        width: 100%;
+        margin-right: 0; /* Remove a margem lateral que não é mais necessária */
+    }
+
+    /* Ajuste opcional para diminuir um pouco o padding em telas pequenas */
+    body {
+        padding: 10px;
+    }
+}
