@@ -264,3 +264,11 @@ function generateSacTable() {
 
     document.getElementById('amortizationTable').innerHTML = tableHTML;
 }
+// ===================================================================
+// INICIALIZAÇÃO AUTOMÁTICA AO CARREGAR A PÁGINA
+// ===================================================================
+document.addEventListener('DOMContentLoaded', function() {
+    // Chama a função de cálculo do investimento uma vez
+    // para que o gráfico já apareça preenchido na tela inicial.
+    calculateInvestment();
+});
