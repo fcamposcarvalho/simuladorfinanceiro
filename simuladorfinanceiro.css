@@ -4,6 +4,8 @@ body {
     color: #333;
     margin: 0;
     padding: 20px;
+    /* AJUSTADO: Aumenta a fonte base para melhorar a legibilidade geral */
+    font-size: 17px;
 }
 .container {
     max-width: 960px;
@@ -28,11 +30,14 @@ h1, h2 {
 }
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px; /* Aumentado para dar mais respiro */
+    font-size: 16px;   /* AJUSTADO */
 }
 input[type="number"], select {
     width: 100%;
-    padding: 8px;
+    /* AJUSTADO: Padding e font-size maiores para melhor visualização */
+    padding: 10px;
+    font-size: 18px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -40,7 +45,7 @@ input[type="number"], select {
 button {
     background-color: #007bff;
     color: white;
-    padding: 10px 15px;
+    padding: 12px 18px; /* AJUSTADO */
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -53,6 +58,14 @@ button:hover {
 .results, .table-container {
     margin-top: 20px;
 }
+/* AJUSTADO: Destaque maior para os resultados */
+.results p {
+    font-size: 1.2em;
+}
+.results strong {
+    font-size: 1.3em;
+    color: #0056b3;
+}
 .summary {
     border: 1px solid #007bff;
     background-color: #e7f3ff;
@@ -61,8 +74,8 @@ button:hover {
     margin-bottom: 20px;
 }
 .summary p {
-    margin: 5px 0;
-    font-size: 1.1em;
+    margin: 8px 0; /* AJUSTADO */
+    font-size: 1.2em; /* AUMENTADO */
 }
 table {
     width: 100%;
@@ -71,8 +84,10 @@ table {
 }
 th, td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 10px; /* AJUSTADO */
     text-align: left;
+    /* AJUSTADO: Aumenta o texto da tabela */
+    font-size: 16px;
 }
 th {
     background-color: #f2f2f2;
