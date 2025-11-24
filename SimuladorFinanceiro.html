@@ -100,14 +100,14 @@
 
         <!-- Seção do Simulador de Investimentos -->
         <div class="simulator-section">
-            <h2>Simulador de Investimentos: Rumo aos R$ 5 Milhões</h2>
+            <h2>Simulador de Investimentos: Rumo aos R$ 100 mil</h2>
             <div class="form-group">
                 <label for="initialInvestment">Investimento Inicial (R$):</label>
-                <input type="number" id="initialInvestment" value="100000">
+                <input type="number" id="initialInvestment" value="1000">
             </div>
             <div class="form-group">
                 <label for="monthlyContribution">Aporte Mensal (R$):</label>
-                <input type="number" id="monthlyContribution" value="15000">
+                <input type="number" id="monthlyContribution" value="500">
             </div>
             <div class="form-group">
                 <label for="annualReturn">Rentabilidade Anual (%):</label>
@@ -115,7 +115,7 @@
             </div>
             <div class="form-group">
                 <label for="goal">Objetivo Financeiro (R$):</label>
-                <input type="number" id="goal" value="5000000">
+                <input type="number" id="goal" value="100000">
             </div>
             <button onclick="calculateInvestment()">Simular</button>
             <div class="results" id="investmentResult"></div>
@@ -123,7 +123,31 @@
                 <canvas id="investmentChart"></canvas>
             </div>
         </div>
-
+        
+        <!-- Seção das Tabelas de Amortização -->
+        <div class="simulator-section">
+            <h2>Análise de Financiamentos: Tabela PRICE vs. Tabela SAC</h2>
+            <div class="form-group">
+                <label for="loanAmount">Valor Financiado (R$):</label>
+                <input type="number" id="loanAmount" value="10000">
+            </div>
+            <div class="form-group">
+                <label for="monthlyInterestRate">Taxa de Juros Mensal (%):</label>
+                <input type="number" id="monthlyInterestRate" value="1.25">
+            </div>
+            <div class="form-group">
+                <label for="loanTerm">Prazo (meses):</label>
+                <input type="number" id="loanTerm" value="60">
+            </div>
+            <div class="form-group">
+                <label for="loanFv">Valor Futuro (Residual R$):</label>
+                <input type="number" id="loanFv" value="0.00">
+            </div>
+            <button onclick="generatePriceTable()">Gerar Tabela PRICE</button>
+            <button onclick="generateSacTable()">Gerar Tabela SAC</button>
+            <div class="table-container" id="amortizationTable"></div>
+        </div>
+        
         <!-- Seção da Calculadora Financeira HP 12C -->
         <div class="simulator-section">
             <h2>Calculadora Financeira Avançada (Estilo HP 12C)</h2>
@@ -139,7 +163,7 @@
             </div>
             <div class="form-group">
                 <label for="hp_n">n (meses):</label>
-                <input type="number" id="hp_n" value="312">
+                <input type="number" id="hp_n" value="360">
             </div>
             <div class="form-group">
                 <label for="hp_i">i (taxa % a.m.):</label>
@@ -147,7 +171,7 @@
             </div>
             <div class="form-group">
                 <label for="hp_pv">PV (Valor Presente R$):</label>
-                <input type="number" id="hp_pv" value="-4500000">
+                <input type="number" id="hp_pv" value="-1000000">
             </div>
             <div class="form-group">
                 <label for="hp_pmt">PMT (Aporte Mensal R$):</label>
@@ -155,34 +179,10 @@
             </div>
             <div class="form-group">
                 <label for="hp_fv">FV (Valor Futuro R$):</label>
-                <input type="number" id="hp_fv" value="100000">
+                <input type="number" id="hp_fv" value="50000">
             </div>
             <button onclick="calculateHP()">Calcular</button>
             <div class="results" id="hpResult"></div>
-        </div>
-
-        <!-- Seção das Tabelas de Amortização -->
-        <div class="simulator-section">
-            <h2>Análise de Financiamentos: Tabela PRICE vs. Tabela SAC</h2>
-            <div class="form-group">
-                <label for="loanAmount">Valor Financiado (R$):</label>
-                <input type="number" id="loanAmount" value="4500000">
-            </div>
-            <div class="form-group">
-                <label for="monthlyInterestRate">Taxa de Juros Mensal (%):</label>
-                <input type="number" id="monthlyInterestRate" value="0.85">
-            </div>
-            <div class="form-group">
-                <label for="loanTerm">Prazo (meses):</label>
-                <input type="number" id="loanTerm" value="312">
-            </div>
-            <div class="form-group">
-                <label for="loanFv">Valor Futuro (Residual R$):</label>
-                <input type="number" id="loanFv" value="100000">
-            </div>
-            <button onclick="generatePriceTable()">Gerar Tabela PRICE</button>
-            <button onclick="generateSacTable()">Gerar Tabela SAC</button>
-            <div class="table-container" id="amortizationTable"></div>
         </div>
     </div>
 
@@ -456,4 +456,5 @@
     </script>
 
 </body>
+
 </html>
